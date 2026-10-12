@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3554d1">
+<meta name="description" content="魏湘军 · 东北财经大学应用统计学 · 数据分析 / AI 应用方向个人简历">
+<title>魏湘军 · 应用统计学 · 个人简历</title>
+<style>
+:root{
+  --bg:#f4f6fb; --surface:#ffffff; --surface-2:#f1f4fa;
+  --text:#0f1425; --text-2:#3b4459; --muted:#6b7488;
+  --border:rgba(15,20,37,.09); --border-2:rgba(15,20,37,.16);
+  --primary:#3554d1; --primary-2:#0ea5b7; --primary-soft:rgba(53,84,209,.10);
+  --glow-1:rgba(53,84,209,.15); --glow-2:rgba(14,165,183,.13);
+  --shadow:0 1px 2px rgba(15,20,37,.04), 0 8px 24px rgba(15,20,37,.06);
+  --shadow-hover:0 12px 34px rgba(15,20,37,.13);
+  --nav-bg:rgba(244,246,251,.76); --radius:16px; --maxw:1080px;
+}
+html[data-theme="dark"]{
+  --bg:#080b14; --surface:#101728; --surface-2:#161f36;
+  --text:#e9eefb; --text-2:#c2cbe2; --muted:#8d97b2;
+  --border:rgba(255,255,255,.09); --border-2:rgba(255,255,255,.18);
+  --primary:#7b93ff; --primary-2:#3bc9db; --primary-soft:rgba(123,147,255,.14);
+  --glow-1:rgba(123,147,255,.16); --glow-2:rgba(59,201,219,.12);
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.38);
+  --shadow-hover:0 16px 44px rgba(0,0,0,.55);
+  --nav-bg:rgba(8,11,20,.72);
+}
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  font-size:15px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+  transition:background .25s ease,color .25s ease;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(840px 470px at 8% -8%, var(--glow-1), transparent 68%),
+    radial-gradient(700px 430px at 98% 2%, var(--glow-2), transparent 70%);
+}
+a{color:inherit;text-decoration:none;}
+button{font:inherit;color:inherit;}
+svg{display:block;flex:none;}
+::selection{background:var(--primary);color:#fff;}
+.skip{position:absolute;left:-9999px;top:0;z-index:999;background:var(--primary);color:#fff;padding:9px 16px;border-radius:0 0 12px 0;font-weight:700;}
+.skip:focus{left:0;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+section{scroll-margin-top:78px;}
+.sec{padding:54px 0;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:24px;}
+.sec-head .idx{font-size:11.5px;font-weight:900;letter-spacing:.14em;color:var(--primary);background:var(--primary-soft);padding:3px 9px;border-radius:7px;}
+.sec-head h2{font-size:19.5px;margin:0;font-weight:800;letter-spacing:.01em;}
+.sec-head .rule{flex:1;height:1px;background:linear-gradient(90deg,var(--border-2),transparent);}
+
+.card{
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:var(--border-2);}
+
+/* NAV */
+.topbar{
+  position:sticky;top:0;z-index:60;background:var(--nav-bg);
+  -webkit-backdrop-filter:saturate(180%) blur(16px);backdrop-filter:saturate(180%) blur(16px);
+  border-bottom:1px solid transparent;transition:border-color .25s ease,box-shadow .25s ease;
+}
+.topbar.scrolled{border-bottom-color:var(--border);box-shadow:0 6px 22px rgba(15,20,37,.07);}
+html[data-theme="dark"] .topbar.scrolled{box-shadow:0 6px 22px rgba(0,0,0,.45);}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:14px;}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.02em;flex:none;}
+.brand .mark{
+  width:32px;height:32px;border-radius:10px;display:grid;place-items:center;
+  color:#fff;font-size:15px;font-weight:900;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  box-shadow:0 6px 16px rgba(53,84,209,.35);
+}
+.nav-links{display:flex;gap:2px;margin-left:auto;}
+.nav-links a{padding:7px 12px;border-radius:9px;font-size:13.5px;font-weight:600;color:var(--muted);transition:background .18s ease,color .18s ease;}
+.nav-links a:hover,.nav-links a.active{background:var(--primary-soft);color:var(--primary);}
+.nav-actions{display:flex;gap:6px;align-items:center;}
+.icon-btn{
+  width:34px;height:34px;border-radius:10px;border:1px solid var(--border);background:var(--surface);
+  display:grid;place-items:center;cursor:pointer;color:var(--text-2);
+  transition:transform .18s ease,border-color .18s ease,color .18s ease;
+}
+.icon-btn:hover{transform:translateY(-2px);border-color:var(--primary);color:var(--primary);}
+.icon-btn:focus-visible{outline:2px solid var(--primary);outline-offset:2px;}
+.ico-moon{display:none;}
+html[data-theme="dark"] .ico-sun{display:none;}
+html[data-theme="dark"] .ico-moon{display:block;}
+@media (max-width:880px){
+  .nav-inner{flex-wrap:wrap;gap:8px;}
+  .nav-links{order:3;width:100%;margin-left:0;overflow-x:auto;padding-bottom:2px;scrollbar-width:none;-ms-overflow-style:none;}
+  .nav-links::-webkit-scrollbar{display:none;}
+  .nav-links a{white-space:nowrap;padding:6px 10px;font-size:13px;}
+  .nav-actions{margin-left:auto;}
+}
+
+/* HERO */
+.hero{padding:52px 0 8px;}
+.hero-grid{display:grid;grid-template-columns:1.5fr .95fr;gap:26px;align-items:start;}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+.pill{
+  display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--text-2);
+  background:var(--surface);border:1px solid var(--border);padding:6px 13px;border-radius:999px;box-shadow:var(--shadow);
+}
+.pill svg{color:var(--primary);}
+.hero h1{font-size:clamp(34px,6.2vw,54px);line-height:1.06;margin:16px 0 10px;letter-spacing:-.025em;font-weight:900;}
+.hero h1 span{background:linear-gradient(120deg,var(--primary),var(--primary-2));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.role{font-size:15.5px;font-weight:800;color:var(--primary);margin:0 0 12px;letter-spacing:.01em;}
+.summary{color:var(--muted);max-width:58ch;margin:0 0 18px;font-size:14.5px;}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
+.badge{
+  font-size:12.5px;font-weight:700;padding:5px 11px;border-radius:999px;
+  background:var(--surface-2);border:1px solid var(--border);color:var(--text-2);
+  transition:color .18s ease,border-color .18s ease,transform .18s ease;
+}
+.badge:hover{color:var(--primary);border-color:var(--primary);transform:translateY(-2px);}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 17px;border-radius:11px;
+  font-size:14px;font-weight:700;cursor:pointer;border:1px solid transparent;
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease,color .18s ease;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn:focus-visible{outline:2px solid var(--primary);outline-offset:2px;}
+.btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;box-shadow:0 8px 22px rgba(53,84,209,.30);}
+.btn-primary:hover{box-shadow:0 12px 30px rgba(53,84,209,.42);}
+.btn-ghost{background:var(--surface);border-color:var(--border-2);color:var(--text-2);}
+.btn-ghost:hover{border-color:var(--primary);color:var(--primary);}
+
+.hero-aside{padding:10px 18px;}
+.aside-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:11px 0;border-bottom:1px dashed var(--border);font-size:13.5px;}
+.aside-row:last-child{border-bottom:none;}
+.aside-row .k{color:var(--muted);flex:none;}
+.aside-row .v{font-weight:700;text-align:right;word-break:break-all;}
+.aside-row .v.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.02em;}
+
+/* HIGHLIGHTS */
+.highlight-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+@media (max-width:900px){.highlight-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:460px){.highlight-grid{grid-template-columns:1fr;}}
+.hl{padding:18px;position:relative;overflow:hidden;}
+.hl::after{content:"";position:absolute;right:-26px;top:-26px;width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--glow-1),transparent);pointer-events:none;}
+.hl .num{font-size:27px;font-weight:900;letter-spacing:-.02em;line-height:1.1;background:linear-gradient(120deg,var(--primary),var(--primary-2));-webkit-background-clip:text;background-clip:text;color:transparent;}
+.hl .lbl{font-weight:800;font-size:13.5px;margin:7px 0 5px;}
+.hl .dsc{font-size:12.5px;color:var(--muted);line-height:1.58;}
+
+/* TABS */
+.tablist{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;}
+.tab{
+  position:relative;border:1px solid var(--border);background:var(--surface);color:var(--muted);
+  padding:9px 17px;border-radius:999px;cursor:pointer;font-size:13.5px;font-weight:700;
+  transition:background .2s ease,color .2s ease,border-color .2s ease,box-shadow .2s ease,transform .2s ease;
+}
+.tab:hover{color:var(--primary);border-color:var(--primary);transform:translateY(-1px);}
+.tab[aria-selected="true"]{
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-color:transparent;
+  box-shadow:0 8px 20px rgba(53,84,209,.30);
+}
+.tab:focus-visible{outline:2px solid var(--primary);outline-offset:2px;}
+.tabpanel:focus{outline:none;}
+@keyframes panelIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+.tabpanel:not([hidden]){animation:panelIn .3s ease both;}
+.panel-title{display:none;}
+
+/* EXPERIENCE */
+.exp-list{display:flex;flex-direction:column;gap:14px;}
+.exp{padding:20px 22px 20px 24px;position:relative;overflow:hidden;}
+.exp::before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:3px;border-radius:0 4px 4px 0;background:linear-gradient(180deg,var(--primary),var(--primary-2));}
+.exp-head{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:baseline;}
+.exp-head h3{margin:0;font-size:15.5px;font-weight:800;letter-spacing:.005em;}
+.exp-head .time{font-size:12px;font-weight:800;color:var(--primary);background:var(--primary-soft);padding:3px 10px;border-radius:999px;white-space:nowrap;}
+.exp-sub{font-size:13px;color:var(--muted);margin:3px 0 12px;}
+.bullets{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:7px;}
+.bullets li{position:relative;padding-left:18px;font-size:13.8px;color:var(--text-2);line-height:1.64;}
+.bullets li::before{content:"";position:absolute;left:3px;top:.62em;width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-2));}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
+.chip{font-size:11.8px;font-weight:700;padding:3px 9px;border-radius:7px;background:var(--surface-2);color:var(--muted);border:1px solid var(--border);}
+.empty{padding:30px 24px;text-align:center;color:var(--muted);font-size:14px;}
+.empty strong{display:block;color:var(--text);font-size:15px;margin-bottom:6px;font-weight:800;}
+.empty .dot{width:38px;height:38px;border-radius:12px;margin:0 auto 12px;display:grid;place-items:center;color:var(--primary);background:var(--primary-soft);}
+
+/* PROJECTS */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
+.proj{padding:20px;display:flex;flex-direction:column;}
+.proj-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px;}
+.proj-top .cat{font-size:11.5px;font-weight:800;letter-spacing:.04em;color:var(--primary);background:var(--primary-soft);padding:3px 9px;border-radius:7px;}
+.proj-top .time{font-size:12px;color:var(--muted);font-weight:600;}
+.proj h3{margin:0 0 8px;font-size:15.5px;font-weight:800;letter-spacing:.005em;}
+.proj-desc{font-size:13.2px;color:var(--muted);margin:0 0 13px;line-height:1.62;}
+.proj .bullets li{font-size:13.2px;}
+.tech{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;padding-top:14px;border-top:1px dashed var(--border);}
+.tech span{font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:7px;background:var(--primary-soft);color:var(--primary);}
+
+/* SKILLS */
+.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+@media (max-width:780px){.skill-grid{grid-template-columns:1fr;}}
+.skill-card{padding:20px 22px;}
+.skill-card h3{margin:0 0 16px;font-size:14px;font-weight:800;display:flex;align-items:center;gap:9px;}
+.skill-card h3::before{content:"";width:9px;height:9px;border-radius:3px;background:linear-gradient(135deg,var(--primary),var(--primary-2));}
+.skill{margin-bottom:13px;}
+.skill:last-child{margin-bottom:0;}
+.skill-top{display:flex;justify-content:space-between;font-size:13px;font-weight:700;margin-bottom:6px;gap:10px;}
+.skill-top .pct{color:var(--muted);font-weight:700;font-size:11.8px;}
+.bar{height:7px;border-radius:999px;background:var(--surface-2);overflow:hidden;border:1px solid var(--border);}
+.bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--primary),var(--primary-2));transition:width 1s cubic-bezier(.22,.85,.3,1);}
+
+/* EDUCATION */
+.edu-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:16px;align-items:start;}
+@media (max-width:840px){.edu-grid{grid-template-columns:1fr;}}
+.edu{padding:22px;}
+.edu-top{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:baseline;}
+.edu-top h3{margin:0;font-size:16.5px;font-weight:900;letter-spacing:.005em;}
+.edu-top .time{font-size:12px;font-weight:800;color:var(--primary);background:var(--primary-soft);padding:3px 10px;border-radius:999px;white-space:nowrap;}
+.edu-major{font-size:13.5px;font-weight:700;color:var(--text-2);margin:4px 0 14px;}
+.course-title{font-size:12.5px;font-weight:800;color:var(--muted);letter-spacing:.06em;margin:16px 0 9px;text-transform:uppercase;}
+.award{padding:22px;}
+.award-list{display:flex;flex-direction:column;gap:11px;margin:0;padding:0;list-style:none;}
+.award-list li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:13.5px;font-weight:700;padding-bottom:11px;border-bottom:1px dashed var(--border);}
+.award-list li:last-child{border-bottom:none;padding-bottom:0;}
+.award-list .note{font-size:11.5px;font-weight:800;color:var(--primary);background:var(--primary-soft);padding:2px 9px;border-radius:999px;white-space:nowrap;}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:26px 0 38px;margin-top:16px;color:var(--muted);font-size:12.8px;}
+.foot-inner{max-width:var(--maxw);margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;}
+
+/* TO TOP */
+#toTop{
+  position:fixed;right:20px;bottom:24px;width:44px;height:44px;border-radius:14px;
+  border:1px solid var(--border);background:var(--surface);color:var(--primary);
+  display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow);z-index:55;
+  opacity:0;visibility:hidden;transform:translateY(10px);
+  transition:opacity .25s ease,transform .25s ease,visibility .25s,border-color .2s ease;
+}
+#toTop.show{opacity:1;visibility:visible;transform:none;}
+#toTop:hover{border-color:var(--primary);}
+
+/* TOAST */
+.toast{
+  position:fixed;left:50%;bottom:28px;z-index:200;transform:translate(-50%,16px);
+  background:var(--text);color:var(--bg);padding:10px 18px;border-radius:12px;
+  font-size:13.5px;font-weight:700;box-shadow:0 14px 36px rgba(0,0,0,.26);
+  opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;
+  max-width:90vw;text-align:center;
+}
+.toast.show{opacity:1;transform:translate(-50%,0);}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease;transition-delay:var(--d,0ms);}
+.reveal.in{opacity:1;transform:none;}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;}
+  .reveal{opacity:1!important;transform:none!important;}
+}
+
+@page{margin:12mm;}
+@media print{
+  html,body{background:#fff!important;color:#111!important;}
+  body::before{display:none!important;}
+  .topbar,#toTop,.hero-actions,.tablist,.toast,.skip{display:none!important;}
+  .tabpanel[hidden]{display:block!important;}
+  .tabpanel{animation:none!important;}
+  .panel-title{display:block!important;font-size:14px;font-weight:900;margin:14px 0 10px;color:#1b2a6b;}
+  .sec{padding:12px 0;break-inside:avoid;}
+  .hero{padding:0 0 8px;}
+  .card{box-shadow:none!important;border:1px solid #dcdcdc!important;break-inside:avoid;transform:none!important;}
+  .reveal{opacity:1!important;transform:none!important;}
+  .hl .num,.hero h1 span{
+    background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;
+    -webkit-text-fill-color:#1b2a6b!important;color:#1b2a6b!important;
+  }
+  .exp::before{background:#3554d1!important;}
+  .bar i{background:#3554d1!important;}
+  .bar{border:1px solid #ddd!important;}
+  a{color:#111!important;}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="topbar" id="topbar">
+  <div class="nav-inner">
+    <a class="brand" href="#hero" aria-label="返回顶部">
+      <span class="mark" aria-hidden="true">魏</span>
+      <span>魏湘军</span>
+    </a>
+    <nav class="nav-links" aria-label="页面导航">
+      <a href="#highlights">亮点</a>
+      <a href="#experience">经历</a>
+      <a href="#projects">项目</a>
+      <a href="#skills">技能</a>
+      <a href="#education">教育</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="切换深浅色模式" title="切换深浅色模式">
+        <svg class="ico-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+        </svg>
+        <svg class="ico-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+        </svg>
+      </button>
+      <button class="icon-btn" id="printBtn" type="button" aria-label="打印或导出 PDF" title="打印 / 导出 PDF">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M6 9V2h12v7"/>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+          <path d="M6 14h12v8H6z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-main">
+          <span class="pill">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 10 12 5 2 10l10 5 10-5z"/>
+              <path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/>
+            </svg>
+            东北财经大学 · 应用统计学 · 2026 级
+          </span>
+          <h1><span>魏湘军</span></h1>
+          <p class="role">数据分析 / AI 应用 / 咨询 / 金融科技方向实习生</p>
+          <p class="summary" id="heroSummary"></p>
+          <div class="badges" id="heroBadges"></div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" id="mailLink" href="#">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/>
+              </svg>
+              发送邮件
+            </a>
+            <button class="btn btn-ghost" id="copyMail" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="12" height="12" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+              复制邮箱
+            </button>
+            <a class="btn btn-ghost" id="phoneLink" href="#">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/>
+              </svg>
+              电话联系
+            </a>
+            <button class="btn btn-ghost" id="copyQQ" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"/>
+              </svg>
+              复制 QQ
+            </button>
+          </div>
+        </div>
+        <aside class="card hero-aside" id="heroAside" aria-label="基本信息"></aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="highlights">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">01</span>
+        <h2>亮点成果</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <div class="highlight-grid" id="hlGrid"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">02</span>
+        <h2>经历</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <div id="expTabs"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">03</span>
+        <h2>项目经历</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <div id="projTabs"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="skills">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">04</span>
+        <h2>技能矩阵</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <div class="skill-grid" id="skillGrid"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="education">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="idx">05</span>
+        <h2>教育与证书</h2>
+        <span class="rule" aria-hidden="true"></span>
+      </div>
+      <div class="edu-grid">
+        <div id="eduWrap"></div>
+        <div id="awardWrap"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <span>© 2026 魏湘军 · 个人简历</span>
+    <span>最后更新：<span id="lastUpdate">—</span></span>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="返回顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5"/><path d="m5 12 7-7 7 7"/>
+  </svg>
+</button>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  'use strict';
+
+  /* =========================================================
+     1. 简历数据
+     ========================================================= */
+  var DATA = {
+    emailUser: '3454814087',
+    emailDomain: 'qq.com',
+    phone: '19151894675',
+    qq: '3454814087',
+
+    summary: '应用统计学在读，构建「数学基础 + 统计方法 + 编程工具 + AI 应用」复合能力。ISFJ 型长期主义者，以极强自律性驱动日计划执行与复盘；擅长用深度逻辑思辨拆解复杂问题，并以高度执行力推动落地。持续探索大模型与自动化工作流，把 AI 变成可迁移的效率杠杆。',
+
+    keywords: [
+      'Python', '统计分析', 'SQL', 'Prompt Engineering',
+      '机器学习基础', '数据可视化', 'Excel / SPSS', 'Git'
+    ],
+
+    aside: [
+      ['电话', '19151894675', true],
+      ['QQ', '3454814087', true],
+      ['邮箱', '3454814087@qq.com', true],
+      ['家乡', '湖南省永州市'],
+      ['求职意向', '数据分析 / AI 应用 / 咨询 / 金融科技'],
+      ['当前阶段', '东北财经大学 · 应用统计学 · 大一上'],
+      ['个人特质', 'ISFJ · 极强自律 · 逻辑思辨 · 高度执行'],
+      ['兴趣爱好', '乒乓球 · 棋类活动']
+    ],
+
+    highlights: [
+      { num: '8+', label: '门核心课程在读', desc: '数学分析、概率论与数理统计、Python 程序设计、数据库原理等，夯实统计与编程底座。' },
+      { num: '60+', label: '条提示词模板', desc: '系统测试主流大模型与 AI 工具，沉淀可复用的 Prompt 库与自动化工作流。' },
+      { num: '200+', label: '张结构化知识卡片', desc: '以「AI 提问 — 人工校验 — 结构化归档」构建个人知识库，复习效率提升约 40%。' },
+      { num: '95%', label: '周计划执行率', desc: '连续 12+ 周执行「日计划 + 周末复盘」，用高度自律换取长期复利。' }
+    ],
+
+    experience: [
+      {
+        id: 'work',
+        label: '实习 / 工作',
+        items: [],
+        emptyTitle: '正在寻找实习与项目机会',
+        emptyText: '目前处于大一阶段，正积极寻找数据分析、AI 应用、咨询与金融科技方向的实习与项目合作机会，可长期投入、快速上手。'
+      },
+      {
+        id: 'campus',
+        label: '校园实践',
+        items: [
+          {
+            role: '班级 / 学院学生工作 · 信息统计与材料整理',
+            time: '2026.09 – 至今',
+            meta: '东北财经大学 · 应用统计学专业',
+            bullets: [
+              '负责班级信息统计与材料整理，搭建统一表格模板，累计服务 40+ 名同学，信息回收完整率达 98%。',
+              '承担活动通知与进度跟进，联动班委完成 5+ 场班级 / 学院活动，任务按时交付率 100%。',
+              '沉淀 3 套可复用文档模板与 1 份流程说明，同类任务准备时间缩短约 40%。',
+              '建立「发布 — 回收 — 核对 — 归档」四步流程，显著减少信息遗漏与重复确认。'
+            ],
+            chips: ['信息统计', '流程优化', '文档管理', '团队协作']
+          },
+          {
+            role: '乒乓球 / 棋类活动组织与参与',
+            time: '2026.09 – 至今',
+            meta: '校园 / 社区',
+            bullets: [
+              '长期坚持乒乓球与棋类活动，持续训练策略思维、专注力与抗压能力。',
+              '参与组织 3+ 场友谊赛与棋类交流，负责赛程安排与对阵记录，累计参与 30+ 人次。',
+              '在快节奏对抗中训练决策速度，在棋类博弈中强化全局观与逻辑推演。',
+              '将竞技中的自律与复盘习惯迁移到学习与项目执行，形成「赛前准备 — 过程记录 — 赛后复盘」闭环。'
+            ],
+            chips: ['组织协调', '策略思维', '抗压能力']
+          }
+        ]
+      },
+      {
+        id: 'self',
+        label: '自主学习',
+        items: [
+          {
+            role: 'AI 工具实践与效率提升',
+            time: '2026.09 – 至今',
+            meta: '自主项目 · 持续进行',
+            bullets: [
+              '系统测试主流大模型与 AI 工具，覆盖总结、翻译、代码、数据分析 4 类场景，沉淀 60+ 条提示词模板。',
+              '建立「输入 — 处理 — 输出 — 复盘」SOP，形成可迁移的 AI 工作流，单次资料处理时间缩短约 50%。',
+              '输出学习笔记与工具评测 10+ 篇，在班级 / 社群分享 AI 用法 3+ 次，获得正向反馈。',
+              '用 AI 辅助梳理统计知识框架与错题解析，整理知识卡片 200+ 张，复习效率提升约 40%。'
+            ],
+            chips: ['Prompt Engineering', 'LLM 应用', '自动化工作流', '知识管理']
+          },
+          {
+            role: '统计与编程自学路径',
+            time: '2026.09 – 至今',
+            meta: '自主学习 · 周计划驱动',
+            bullets: [
+              '制定并执行周计划（每日任务 + 周末复盘），连续执行 12+ 周，计划完成率稳定在 95% 左右。',
+              '自学 Python（Pandas / NumPy / Matplotlib）与 SQL 基础，完成 20+ 个练习案例。',
+              '采用费曼学习法输出学习笔记，形成个人知识库，覆盖 30+ 个核心知识点。',
+              '主动学习机器学习基础流程与数据可视化方法，为后续课程与项目打下扎实基础。'
+            ],
+            chips: ['Python', 'SQL', '费曼学习法', '长期主义']
+          }
+        ]
+      }
+    ],
+
+    projectCats: [
+      { id: 'all', label: '全部' },
+      { id: 'data', label: '数据分析' },
+      { id: 'ai', label: 'AI 应用' },
+      { id: 'model', label: '建模竞赛' }
+    ],
+
+    projects: [
+      {
+        name: '校园数据分析入门项目',
+        cat: 'data',
+        catLabel: '数据分析',
+        time: '2026.09 – 至今',
+        desc: '围绕校园学习与生活数据确定分析主题，完整跑通「问题定义 → 数据清洗 → 描述统计 → 可视化 → 结论输出」全链路。',
+        bullets: [
+          '使用 Python / Excel 完成数据清洗与描述统计，输出 12+ 张可视化图表。',
+          '形成 15 页分析报告，提出 5 条可执行建议，获得课程与同学的正向反馈。',
+          '沉淀一套可复用的分析模板，同类任务上手时间缩短约 40%。'
+        ],
+        tech: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Excel']
+      },
+      {
+        name: 'AI 辅助统计学习与知识管理',
+        cat: 'ai',
+        catLabel: 'AI 应用',
+        time: '2026.09 – 至今',
+        desc: '用大模型重构统计学的理解与复习流程，建立结构化、可检索的个人知识库。',
+        bullets: [
+          '利用 LLM 生成知识框架、错题解析与案例类比，把抽象推导转化为可复述的语言。',
+          '整理知识卡片 200+ 张，覆盖 30+ 个核心知识点，复习效率提升约 40%。',
+          '形成「AI 提问 — 人工校验 — 结构化归档」的可复用方法，并迁移到其他课程。'
+        ],
+        tech: ['LLM', 'Prompt Engineering', 'Markdown', 'Notion / Obsidian']
+      },
+      {
+        name: '统计建模 / 数学竞赛预备',
+        cat: 'model',
+        catLabel: '建模竞赛',
+        time: '2026.10 – 至今',
+        desc: '为参加统计建模与数学类竞赛组建学习小组，负责资料搜集、模型复现与进度跟踪。',
+        bullets: [
+          '组建 3 人学习小组，负责任务拆分与进度跟踪，阶段目标按时完成率 100%。',
+          '完成 3+ 个统计建模案例复现，输出代码与报告各 3 份。',
+          '使用 Git 与在线文档协同，累计版本管理 20+ 次，减少重复劳动约 30%。'
+        ],
+        tech: ['Python', 'Scikit-learn', '统计分析', 'Git']
+      }
+    ],
+
+    skills: [
+      { title: '统计与分析', items: [['描述统计', 85], ['假设检验', 75], ['回归分析', 70], ['抽样调查', 70]] },
+      { title: '编程与工具', items: [['Python', 78], ['Pandas / NumPy', 75], ['SQL', 62], ['R 语言', 55], ['Git', 60]] },
+      { title: 'AI 与自动化', items: [['Prompt Engineering', 85], ['LLM 应用', 80], ['数据可视化', 75], ['机器学习基础', 62]] },
+      { title: '办公与语言', items: [['Excel / SPSS', 85], ['PPT / 文档撰写', 82], ['Markdown / LaTeX', 70], ['英语（CET-4/6）', 65]] }
+    ],
+
+    education: {
+      school: '东北财经大学',
+      major: '应用统计学 · 本科',
+      time: '2026.09 – 2030.06（预计）',
+      points: [
+        '系统构建「数学基础 + 统计方法 + 编程工具 + AI 应用」复合能力，聚焦数据科学与 AI 应用方向。',
+        '主动学习机器学习基础、Prompt Engineering、数据可视化与自动化工作流，持续拓展技术边界。',
+        '完成多门在线课程，输出学习笔记与个人知识库，形成稳定的「自学 — 输出 — 复盘」循环。'
+      ],
+      courses: ['数学分析', '线性代数', '概率论与数理统计', '统计学原理', 'Python 程序设计', '数据库原理', '微观经济学', '宏观经济学']
+    },
+
+    awards: [
+      { name: '英语 CET-4 / CET-6', note: '备考中' },
+      { name: '计算机二级（Python / Office）', note: '计划报考' },
+      { name: '校级新生奖学金', note: '待评' },
+      { name: '高中数学 / 统计建模竞赛', note: '参赛经历' },
+      { name: '乒乓球 / 棋类比赛', note: '持续参与' }
+    ]
+  };
+
+  /* =========================================================
+     2. 工具函数
+     ========================================================= */
+  function $(sel, root){ return (root || document).querySelector(sel); }
+
+  function el(tag, attrs, children){
+    var node = document.createElement(tag);
+    if (attrs){
+      for (var k in attrs){
+        if (!Object.prototype.hasOwnProperty.call(attrs, k)) continue;
+        var v = attrs[k];
+        if (v === null || v === undefined || v === false) continue;
+        if (k === 'class') node.className = v;
+        else if (k === 'text') node.textContent = v;
+        else if (k === 'html') node.innerHTML = v;
+        else if (k === 'dataset'){ for (var d in v) node.dataset[d] = v[d]; }
+        else if (k === 'style'){ node.setAttribute('style', v); }
+        else node.setAttribute(k, v);
+      }
+    }
+    if (children){
+      (Array.isArray(children) ? children : [children]).forEach(function(c){
+        if (c === null || c === undefined || c === false) return;
+        node.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+      });
+    }
+    return node;
+  }
+
+  function clear(node){ while (node.firstChild) node.removeChild(node.firstChild); }
+
+  function getEmail(){ return DATA.emailUser + '@' + DATA.emailDomain; }
+
+  function toast(msg){
+    var t = $('#toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(t._timer);
+    t._timer = setTimeout(function(){ t.classList.remove('show'); }, 1900);
+  }
+
+  function copyText(text, okMsg){
+    function fallback(){
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); toast(okMsg); }
+      catch(e){ toast('复制失败，请手动复制'); }
+      document.body.removeChild(ta);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){ toast(okMsg); }, fallback);
+    } else {
+      fallback();
+    }
+  }
+
+  /* =========================================================
+     3. 渲染：Hero
+     ========================================================= */
+  function renderHero(){
+    var email = getEmail();
+
+    $('#heroSummary').textContent = DATA.summary;
+
+    var badges = $('#heroBadges');
+    clear(badges);
+    DATA.keywords.forEach(function(k){
+      badges.appendChild(el('span', { class: 'badge', text: k }));
+    });
+
+    var mailLink = $('#mailLink');
+    mailLink.setAttribute('href', 'mailto:' + email);
+
+    var phoneLink = $('#phoneLink');
+    phoneLink.setAttribute('href', 'tel:' + DATA.phone);
+
+    var aside = $('#heroAside');
+    clear(aside);
+    DATA.aside.forEach(function(row){
+      aside.appendChild(
+        el('div', { class: 'aside-row' }, [
+          el('span', { class: 'k', text: row[0] }),
+          el('span', { class: 'v' + (row[2] ? ' mono' : ''), text: row[1] })
+        ])
+      );
+    });
+  }
+
+  /* =========================================================
+     4. 渲染：亮点
+     ========================================================= */
+  function renderHighlights(){
+    var grid = $('#hlGrid');
+    clear(grid);
+    DATA.highlights.forEach(function(h, i){
+      var card = el('article', {
+        class: 'card hl reveal',
+        style: '--d:' + (i * 70) + 'ms'
+      }, [
+        el('div', { class: 'num', text: h.num }),
+        el('div', { class: 'lbl', text: h.label }),
+        el('div', { class: 'dsc', text: h.desc })
+      ]);
+      grid.appendChild(card);
+    });
+  }
+
+  /* =========================================================
+     5. 渲染：经历（Tabs）
+     ========================================================= */
+  function buildExpItem(item, delay){
+    var li = item.bullets.map(function(b){ return el('li', { text: b }); });
+
+    return el('article', {
+      class: 'card exp reveal',
+      style: '--d:' + delay + 'ms'
+    }, [
+      el('div', { class: 'exp-head' }, [
+        el('h3', { text: item.role }),
+        el('span', { class: 'time', text: item.time })
+      ]),
+      item.meta ? el('p', { class: 'exp-sub', text: item.meta }) : null,
+      el('ul', { class: 'bullets' }, li),
+      item.chips && item.chips.length
+        ? el('div', { class: 'chips' }, item.chips.map(function(c){ return el('span', { class: 'chip', text: c }); }))
+        : null
+    ]);
+  }
+
+  function renderExperience(){
+    var host = $('#expTabs');
+    clear(host);
+
+    var tablist = el('div', { class: 'tablist', role: 'tablist', 'aria-label': '经历分类' });
+    var panels = [];
+
+    DATA.experience.forEach(function(group, idx){
+      var tabId = 'exp-tab-' + group.id;
+      var panelId = 'exp-panel-' + group.id;
+
+      var tab = el('button', {
+        class: 'tab', type: 'button', role: 'tab',
+        id: tabId, 'aria-controls': panelId,
+        'aria-selected': idx === 0 ? 'true' : 'false',
+        tabindex: idx === 0 ? '0' : '-1',
+        text: group.label
+      });
+      tablist.appendChild(tab);
+
+      var panel = el('div', {
+        class: 'tabpanel', id: panelId, role: 'tabpanel',
+        'aria-labelledby': tabId, tabindex: '0'
+      });
+      if (idx !== 0) panel.hidden = true;
+
+      panel.appendChild(el('h3', { class: 'panel-title', text: group.label }));
+
+      if (group.items && group.items.length){
+        var list = el('div', { class: 'exp-list' });
+        group.items.forEach(function(item, i){
+          list.appendChild(buildExpItem(item, i * 70));
+        });
+        panel.appendChild(list);
+      } else {
+        panel.appendChild(
+          el('div', { class: 'card empty' }, [
+            el('div', { class: 'dot' }, [
+              el('span', { html: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>' })
+            ]),
+            el('strong', { text: group.emptyTitle || '暂无内容' }),
+            el('span', { text: group.emptyText || '' })
+          ])
+        );
+      }
+
+      panels.push({ tab: tab, panel: panel });
+    });
+
+    host.appendChild(tablist);
+    panels.forEach(function(p){ host.appendChild(p.panel); });
+
+    initTabs(panels);
+  }
+
+  /* =========================================================
+     6. 渲染：项目（Tabs 过滤）
+     ========================================================= */
+  function buildProjectCard(p, delay){
+    return el('article', {
+      class: 'card proj reveal',
+      style: '--d:' + delay + 'ms'
+    }, [
+      el('div', { class: 'proj-top' }, [
+        el('span', { class: 'cat', text: p.catLabel }),
+        el('span', { class: 'time', text: p.time })
+      ]),
+      el('h3', { text: p.name }),
+      el('p', { class: 'proj-desc', text: p.desc }),
+      el('ul', { class: 'bullets' }, p.bullets.map(function(b){ return el('li', { text: b }); })),
+      p.tech && p.tech.length
+        ? el('div', { class: 'tech' }, p.tech.map(function(t){ return el('span', { text: t }); }))
+        : null
+    ]);
+  }
+
+  function renderProjects(){
+    var host = $('#projTabs');
+    clear(host);
+
+    var tablist = el('div', { class: 'tablist', role: 'tablist', 'aria-label': '项目分类' });
+    var panels = [];
+
+    DATA.projectCats.forEach(function(cat, idx){
+      var tabId = 'proj-tab-' + cat.id;
+      var panelId = 'proj-panel-' + cat.id;
+
+      var tab = el('button', {
+        class: 'tab', type: 'button', role: 'tab',
+        id: tabId, 'aria-controls': panelId,
+        'aria-selected': idx === 0 ? 'true' : 'false',
+        tabindex: idx === 0 ? '0' : '-1',
+        text: cat.label
+      });
+      tablist.appendChild(tab);
+
+      var panel = el('div', {
+        class: 'tabpanel', id: panelId, role: 'tabpanel',
+        'aria-labelledby': tabId, tabindex: '0'
+      });
+      if (idx !== 0) panel.hidden = true;
+      panel.appendChild(el('h3', { class: 'panel-title', text: cat.label }));
+
+      var list = DATA.projects.filter(function(p){
+        return cat.id === 'all' || p.cat === cat.id;
+      });
+
+      var grid = el('div', { class: 'proj-grid' });
+      list.forEach(function(p, i){
+        grid.appendChild(buildProjectCard(p, i * 70));
+      });
+      panel.appendChild(grid);
+
+      panels.push({ tab: tab, panel: panel });
+    });
+
+    host.appendChild(tablist);
+    panels.forEach(function(p){ host.appendChild(p.panel); });
+
+    initTabs(panels);
+  }
+
+  /* =========================================================
+     7. 通用 Tabs 交互（含键盘左右切换）
+     ========================================================= */
+  function initTabs(panels){
+    var tabs = panels.map(function(p){ return p.tab; });
+
+    function activate(index, focus){
+      panels.forEach(function(p, i){
+        var on = i === index;
+        p.tab.setAttribute('aria-selected', on ? 'true' : 'false');
+        p.tab.tabIndex = on ? 0 : -1;
+        p.panel.hidden = !on;
+      });
+      if (focus) tabs[index].focus();
+      observeReveal();
+    }
+
+    tabs.forEach(function(tab, i){
+      tab.addEventListener('click', function(){ activate(i, false); });
+      tab.addEventListener('keydown', function(e){
+        var key = e.key;
+        var next = null;
+        if (key === 'ArrowRight') next = (i + 1) % tabs.length;
+        else if (key === 'ArrowLeft') next = (i - 1 + tabs.length) % tabs.length;
+        else if (key === 'Home') next = 0;
+        else if (key === 'End') next = tabs.length - 1;
+        if (next !== null){
+          e.preventDefault();
+          activate(next, true);
+        }
+      });
+    });
+  }
+
+  /* =========================================================
+     8. 渲染：技能矩阵
+     ========================================================= */
+  function renderSkills(){
+    var grid = $('#skillGrid');
+    clear(grid);
+
+    DATA.skills.forEach(function(group, gi){
+      var card = el('div', { class: 'card skill-card reveal', style: '--d:' + (gi * 70) + 'ms' }, [
+        el('h3', { text: group.title })
+      ]);
+
+      group.items.forEach(function(pair){
+        var name = pair[0], pct = pair[1];
+        card.appendChild(
+          el('div', { class: 'skill' }, [
+            el('div', { class: 'skill-top' }, [
+              el('span', { text: name }),
+              el('span', { class: 'pct', text: pct + '%' })
+            ]),
+            el('div', { class: 'bar' }, [
+              el('i', { dataset: { pct: String(pct) } })
+            ])
+          ])
+        );
+      });
+
+      grid.appendChild(card);
+    });
+  }
+
+  /* =========================================================
+     9. 渲染：教育与证书
+     ========================================================= */
+  function renderEducation(){
+    var edu = DATA.education;
+    var wrap = $('#eduWrap');
+    clear(wrap);
+
+    var card = el('div', { class: 'card edu reveal' }, [
+      el('div', { class: 'edu-top' }, [
+        el('h3', { text: edu.school }),
+        el('span', { class: 'time', text: edu.time })
+      ]),
+      el('p', { class: 'edu-major', text: edu.major }),
+      el('ul', { class: 'bullets' }, edu.points.map(function(p){ return el('li', { text: p }); })),
+      el('p', { class: 'course-title', text: '核心课程' }),
+      el('div', { class: 'chips' }, edu.courses.map(function(c){ return el('span', { class: 'chip', text: c }); }))
+    ]);
+
+    wrap.appendChild(card);
+
+    var awardWrap = $('#awardWrap');
+    clear(awardWrap);
+
+    var ul = el('ul', { class: 'award-list' });
+    DATA.awards.forEach(function(a){
+      ul.appendChild(
+        el('li', {}, [
+          el('span', { text: a.name }),
+          el('span', { class: 'note', text: a.note })
+        ])
+      );
+    });
+
+    awardWrap.appendChild(
+      el('div', { class: 'card award reveal', style: '--d:90ms' }, [
+        el('h3', { class: 'course-title', style: 'margin:0 0 14px', text: '证书与荣誉' }),
+        ul
+      ])
+    );
+  }
+
+  /* =========================================================
+     10. 动效：Reveal 与技能条
+     ========================================================= */
+  var revealObserver = null;
+
+  function observeReveal(){
+    var nodes = document.querySelectorAll('.reveal:not(.in)');
+    if (!('IntersectionObserver' in window)){
+      nodes.forEach(function(n){ n.classList.add('in'); });
+      return;
+    }
+    if (!revealObserver){
+      revealObserver = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if (e.isIntersecting){
+            e.target.classList.add('in');
+            revealObserver.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    }
+    nodes.forEach(function(n){ revealObserver.observe(n); });
+  }
+
+  function observeBars(){
+    var bars = document.querySelectorAll('.bar > i');
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function fill(node){ node.style.width = (node.dataset.pct || 0) + '%'; }
+
+    if (reduce || !('IntersectionObserver' in window)){
+      bars.forEach(fill);
+      return;
+    }
+
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          fill(e.target);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    bars.forEach(function(b){ io.observe(b); });
+  }
+
+  /* =========================================================
+     11. 主题 / 打印 / 返回顶部 / 导航高亮
+     ========================================================= */
+  function initTheme(){
+    var root = document.documentElement;
+    var saved = null;
+    try { saved = localStorage.getItem('wxj-theme'); } catch(e){}
+
+    var initial = saved;
+    if (!initial){
+      initial = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    }
+    root.setAttribute('data-theme', initial);
+
+    $('#themeBtn').addEventListener('click', function(){
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('wxj-theme', next); } catch(e){}
+    });
+  }
+
+  function initActions(){
+    $('#printBtn').addEventListener('click', function(){ window.print(); });
+
+    $('#copyMail').addEventListener('click', function(){
+      copyText(getEmail(), '邮箱已复制：' + getEmail());
+    });
+
+    $('#copyQQ').addEventListener('click', function(){
+      copyText(DATA.qq, 'QQ 号已复制：' + DATA.qq);
+    });
+
+    $('#toTop').addEventListener('click', function(){
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  function initScrollSpy(){
+    var topbar = $('#topbar');
+    var toTop = $('#toTop');
+    var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+    var sections = links.map(function(a){
+      return document.querySelector(a.getAttribute('href'));
+    }).filter(Boolean);
+
+    function onScroll(){
+      var y = window.scrollY || window.pageYOffset;
+      topbar.classList.toggle('scrolled', y > 8);
+      toTop.classList.toggle('show', y > 420);
+    }
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    if (!('IntersectionObserver' in window) || !sections.length) return;
+
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (!e.isIntersecting) return;
+        var id = '#' + e.target.id;
+        links.forEach(function(a){
+          a.classList.toggle('active', a.getAttribute('href') === id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+    sections.forEach(function(s){ spy.observe(s); });
+  }
+
+  function setLastUpdate(){
+    var d = new Date();
+    var pad = function(n){ return n < 10 ? '0' + n : '' + n; };
+    $('#lastUpdate').textContent = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  }
+
+  /* =========================================================
+     12. 启动
+     ========================================================= */
+  function boot(){
+    renderHero();
+    renderHighlights();
+    renderExperience();
+    renderProjects();
+    renderSkills();
+    renderEducation();
+
+    initTheme();
+    initActions();
+    initScrollSpy();
+    setLastUpdate();
+
+    observeReveal();
+    observeBars();
+  }
+
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>
+</body>
+</html>
